@@ -50,7 +50,7 @@ ScrollTrigger.batch(".js-target04", {
 
 // スクロール量に応じてアニメーションさせる
 gsap.to(".js-target05", {
-  x: 800,
+  x: 1000,
   scrollTrigger: {
     trigger: ".js-trigger05",
     start: "top center",
@@ -61,3 +61,17 @@ gsap.to(".js-target05", {
 });
 
 // スクロール量に応じてアニメーションさせる2
+gsap.to(".js-target06", {
+  x: 1200,
+  scrollTrigger: {
+    trigger: ".js-trigger06",
+    start: "top center",
+    end: "bottom center",
+    scrub: 0.5, // 0.5秒間余韻で動く
+    markers: true,
+  },
+  stagger: {
+    form: "start",
+    amount: 0.3,
+  },
+});
