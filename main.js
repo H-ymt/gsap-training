@@ -75,3 +75,32 @@ gsap.to(".js-target06", {
     amount: 0.3,
   },
 });
+
+// 特定の位置で要素を固定してアニメーションさせる
+gsap.to(".js-target07", {
+  x: 1000,
+  scrollTrigger: {
+    trigger: ".js-trigger07",
+    start: "center center",
+    end: "+=1000",
+    pin: true, //トリガー要素を固定
+    scrub: 1,
+    markers: true,
+  },
+  stagger: {
+    from: "end",
+    amount: 0.1,
+  },
+});
+
+// 特定の位置でクラス名を追加・削除する
+ScrollTrigger.create({
+  trigger: ".js-trigger08",
+  start: "top center",
+  end: "bottom center",
+  toggleClass: {
+    targets: ".js-target08",
+    className: "is-active",
+  },
+  once: true, //クラス名を追加した後、削除しない
+});
