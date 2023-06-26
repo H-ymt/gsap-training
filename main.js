@@ -102,5 +102,4 @@ ScrollTrigger.create({
     targets: ".js-target08",
     className: "is-active",
   },
-  once: true, //クラス名を追加した後、削除しない
 });
